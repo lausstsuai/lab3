@@ -7,7 +7,7 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
-
+//var userName = require('Enhao')
 var hello = require('./routes/hello');
 
 var app = express();
@@ -36,6 +36,7 @@ if ('development' == app.get('env')) {
 app.get('/', hello.view);
 
 app.get('/hello/:userName', hello.view);
+
 
 // Example route
 // app.get('/users', user.list);
